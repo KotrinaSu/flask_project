@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/add_mens", method="post">
+  <div class="form-group">
+    <label for="vardas">Vardas</label>
+    <input type="text" class="form-control" id="vardas" name="vardas">
+  </div>
+  <div class="form-group">
+    <label for="amzius">Amzius</label>
+    <input type="text" class="form-control" id="amzius" name="amzius">
+  </div>
+  <div class="form-group">
+    <label for="ugis">Ugis</label>
+    <input type="ugis" class="form-control" id="ugis" name="ugis">
+  </div>
+   <div class="form-group">
+    <label for="svoris">Svoris</label>
+    <input type="svoris" class="form-control" id="svoris" name="svoris">
+  </div>
+  <button type="submit" class="btn btn-primary">Išsaugoti</button>
+</form>
+
+{% endblock %}

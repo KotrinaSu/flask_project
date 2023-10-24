@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> cia yra pirmas Men puslapis </h1>
+    <br>
+    <br>
+    <br>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+              <th scope="col">Vardas</th>
+              <th scope="col">Ugis</th>
+              <th scope="col">Svoris</th>
+              <th scope="col">Amzius</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+             {% for value in vyrai %}
+                <tr>
+                    <td> <a href="{{ url_for('vardas', title=value.vardas)}}">{{value.vardas}}</a></td>
+                    <td> {{ value.ugis }} </td>
+                    <td> {{ value.svoris }} </td>
+                    <td> {{ value.amzius }} </td>
+                </tr>
+            {% endfor %}
+
+          </tbody>
+
+    </table>
+    <a class="btn btn-primary" href="{{ url_for('add_mens')}}" role="button">Link</a>
+
+
+{% endblock %}
+
